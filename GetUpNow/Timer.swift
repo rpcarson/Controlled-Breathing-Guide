@@ -22,12 +22,12 @@ class Timer {
     var currentCount: Int = 0 {
         didSet {
             displayDelegate?.updateLabel()
-            print("CurrentCount = \(currentCount)")
+           // print("CurrentCount = \(currentCount)")
         }
     }
     var currentTime: Int = 0 {
         didSet {
-            print("CurrentTime = \(currentTime)")
+           // print("CurrentTime = \(currentTime)")
         }
     }
     
@@ -93,7 +93,7 @@ class Timer {
         incrementTimer()
         countBreath()
         
-        print("Timer: Count called")
+      //  print("Timer: Count called")
     }
     
     enum Length: Int {
@@ -102,6 +102,7 @@ class Timer {
         case Ten = 600
         case Fifteen = 900
         case Twenty = 1200
+        case Unlimited = 9999
     }
     
     enum CountMode: Int {

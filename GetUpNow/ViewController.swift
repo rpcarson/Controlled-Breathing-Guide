@@ -11,14 +11,26 @@ import UIKit
 class ViewController: UIViewController, DisplayType {
     
     var timer = Timer()
-    
+    var audioPlayer = AudioPlayer()
     
     @IBOutlet weak var countLabel: UILabel!
+    
+    @IBOutlet weak var timeSelector: UISegmentedControl!
+    
+    @IBOutlet weak var breathSlider: BreathMeter!
     
     @IBOutlet weak var timeRemainingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        breathSlider.progressViewStyle = .Bar
+        breathSlider.setProgress(0, animated: false)
+        breathSlider.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+        
+        UIView.animateWithDuration(3, animations: { () -> Void in
+            self.breathSlider.setProgress(1.0, animated: true)
+        })
         
         countLabel.text = "0"
         timeRemainingLabel.text = "00.00"
@@ -32,6 +44,21 @@ class ViewController: UIViewController, DisplayType {
     }
     
     @IBAction func start() {
+        
+        var selectedLength: Timer.Length {
+            switch timeSelector.selectedSegmentIndex {
+            case 0: return .Five
+            case 1: return .Ten
+            case 2: return .Fifteen
+            case 3: return .Twenty
+            case 4: return .Unlimited
+            default: return .Five
+            }
+        }
+        
+        print("slected time length (\(selectedLength)")
+        
+        timer.length = selectedLength
         
         timer.startTimer()
         
@@ -47,11 +74,44 @@ class ViewController: UIViewController, DisplayType {
         print("Stop button pressed")
     }
     
+    func updateBreathMeter() {
+        var progressPercentage: Float {
+         return ((Float(timer.currentCount) / Float(timer.countMode.rawValue)))
+        }
+        
+        dispatch_async(dispatch_get_main_queue()) {
+           self.breathSlider.setProgress(progressPercentage, animated: true)
+        }
+        
+//        UIView.animateWithDuration(300) { () -> Void in
+//            self.breathSlider.setProgress(0, animated: true)
+//
+//
+//        }
+        
+        print("progress \(breathSlider.progress)")
+        
+        
+        print("time remaining \(timer.timeRemaining)")
+        print("length \(timer.length.rawValue)")
+        print("prog percent \(progressPercentage)")
+    }
+    
     func updateLabel() {
+        
+        
+       // updateBreathMeter()
         
         countLabel.text = String(timer.currentCount)
         
+        if timer.length == .Unlimited {
+            timeRemainingLabel.text = "00.00"
+            return
+        }
+        
         timeRemainingLabel.text = timer.convertIntToMinutes(timer.timeRemaining)
+        
+       // audioPlayer.playSound()
         
        // print("Update label called")
     }
@@ -71,9 +131,6 @@ class ViewController: UIViewController, DisplayType {
         }
         
     }
-    
-    
-    
     
 }
 

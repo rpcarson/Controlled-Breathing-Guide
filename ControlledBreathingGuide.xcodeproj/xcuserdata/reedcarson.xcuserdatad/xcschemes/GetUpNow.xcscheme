@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B7E97191CE14FB900C91CF9"
-               BuildableName = "GetUpNow.app"
-               BlueprintName = "GetUpNow"
-               ReferencedContainer = "container:GetUpNow.xcodeproj">
+               BuildableName = "ControlledBreathingGuide.app"
+               BlueprintName = "ControlledBreathingGuide"
+               ReferencedContainer = "container:ControlledBreathingGuide.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B7E97191CE14FB900C91CF9"
-            BuildableName = "GetUpNow.app"
-            BlueprintName = "GetUpNow"
-            ReferencedContainer = "container:GetUpNow.xcodeproj">
+            BuildableName = "ControlledBreathingGuide.app"
+            BlueprintName = "ControlledBreathingGuide"
+            ReferencedContainer = "container:ControlledBreathingGuide.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B7E97191CE14FB900C91CF9"
-            BuildableName = "GetUpNow.app"
-            BlueprintName = "GetUpNow"
-            ReferencedContainer = "container:GetUpNow.xcodeproj">
+            BuildableName = "ControlledBreathingGuide.app"
+            BlueprintName = "ControlledBreathingGuide"
+            ReferencedContainer = "container:ControlledBreathingGuide.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B7E97191CE14FB900C91CF9"
-            BuildableName = "GetUpNow.app"
-            BlueprintName = "GetUpNow"
-            ReferencedContainer = "container:GetUpNow.xcodeproj">
+            BuildableName = "ControlledBreathingGuide.app"
+            BlueprintName = "ControlledBreathingGuide"
+            ReferencedContainer = "container:ControlledBreathingGuide.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

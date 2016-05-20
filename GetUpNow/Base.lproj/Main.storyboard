@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetUpNow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ControlledBreathingGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,6 +81,12 @@
                                     <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXc-DZ-Nfn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="002-2P-jL9">
+                                <rect key="frame" x="445" y="47" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr8-vO-zsY">
                                 <rect key="frame" x="200" y="20" width="200" height="75"/>
                                 <constraints>
@@ -91,12 +97,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="002-2P-jL9">
-                                <rect key="frame" x="445" y="47" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PYL-tD-XMj" userLabel="Time Selector">
+                                <rect key="frame" x="37" y="411" width="523" height="29"/>
+                                <segments>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                    <segment title="15"/>
+                                    <segment title="20"/>
+                                    <segment title="No Timer"/>
+                                </segments>
+                            </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-IK-ODT" customClass="BreathMeter" customModule="ControlledBreathingGuide" customModuleProvider="target">
+                                <rect key="frame" x="215" y="299" width="167" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="TkU-2S-c1N"/>
+                                    <constraint firstAttribute="width" constant="167" id="ef0-Hf-0QZ"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,7 +130,12 @@
                             <constraint firstItem="YLe-uF-ymC" firstAttribute="width" secondItem="RTS-eI-FMa" secondAttribute="width" id="Tpr-Co-4uj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cTr-PV-2OA" secondAttribute="trailing" constant="20" id="TvT-lU-vYr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZYJ-ze-5g5" secondAttribute="bottom" constant="20" id="U9o-N4-czY"/>
+                            <constraint firstItem="Ma6-IK-ODT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1.5" id="V8h-ys-It2"/>
+                            <constraint firstItem="PYL-tD-XMj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="VBs-md-Knf"/>
                             <constraint firstItem="ZYJ-ze-5g5" firstAttribute="width" secondItem="RTS-eI-FMa" secondAttribute="width" id="VQn-ae-oEf"/>
+                            <constraint firstItem="ZYJ-ze-5g5" firstAttribute="top" secondItem="PYL-tD-XMj" secondAttribute="bottom" constant="26" id="X5q-fJ-HY4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PYL-tD-XMj" secondAttribute="trailing" constant="20" id="bA5-Lo-KGc"/>
+                            <constraint firstItem="Ma6-IK-ODT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cdX-vP-OoZ"/>
                             <constraint firstItem="YLe-uF-ymC" firstAttribute="height" secondItem="RTS-eI-FMa" secondAttribute="height" id="cp0-Di-VJQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YLe-uF-ymC" secondAttribute="bottom" constant="20" id="e8P-ZG-zJa"/>
                             <constraint firstItem="1e6-tz-twE" firstAttribute="leading" secondItem="YLe-uF-ymC" secondAttribute="trailing" constant="20" id="fDb-Gv-fux"/>
@@ -133,12 +155,15 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="breathSlider" destination="Ma6-IK-ODT" id="vhY-Rq-6Ic"/>
                         <outlet property="countLabel" destination="Cr8-vO-zsY" id="aqM-5J-Pfl"/>
                         <outlet property="timeRemainingLabel" destination="002-2P-jL9" id="zRL-UF-r73"/>
+                        <outlet property="timeSelector" destination="PYL-tD-XMj" id="vWg-Sa-zAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="325"/>
         </scene>
     </scenes>
 </document>

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01E7B61CEE73D20097C973 /* BreathMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01E7B51CEE73D20097C973 /* BreathMeter.swift */; };
 		5B140C441CE185E2004E4B8F /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B140C431CE185E2004E4B8F /* Sound.swift */; };
+		5B140C4B1CE191A6004E4B8F /* rimOne.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B140C471CE191A6004E4B8F /* rimOne.wav */; };
+		5B140C4E1CE191A6004E4B8F /* rimTwo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B140C4A1CE191A6004E4B8F /* rimTwo.wav */; };
 		5B7E971E1CE14FB900C91CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E971D1CE14FB900C91CF9 /* AppDelegate.swift */; };
 		5B7E97201CE14FB900C91CF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E971F1CE14FB900C91CF9 /* ViewController.swift */; };
 		5B7E97231CE14FB900C91CF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E97211CE14FB900C91CF9 /* Main.storyboard */; };
@@ -17,8 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B01E7B51CEE73D20097C973 /* BreathMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BreathMeter.swift; path = ../BreathMeter.swift; sourceTree = "<group>"; };
 		5B140C431CE185E2004E4B8F /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		5B7E971A1CE14FB900C91CF9 /* GetUpNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetUpNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B140C471CE191A6004E4B8F /* rimOne.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rimOne.wav; sourceTree = "<group>"; };
+		5B140C4A1CE191A6004E4B8F /* rimTwo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rimTwo.wav; sourceTree = "<group>"; };
+		5B7E971A1CE14FB900C91CF9 /* ControlledBreathingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlledBreathingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7E971D1CE14FB900C91CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7E971F1CE14FB900C91CF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B7E97221CE14FB900C91CF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +56,7 @@
 		5B7E971B1CE14FB900C91CF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B7E971A1CE14FB900C91CF9 /* GetUpNow.app */,
+				5B7E971A1CE14FB900C91CF9 /* ControlledBreathingGuide.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +68,7 @@
 				5B7E971F1CE14FB900C91CF9 /* ViewController.swift */,
 				5B7E97301CE153CE00C91CF9 /* Timer.swift */,
 				5B140C431CE185E2004E4B8F /* Sound.swift */,
+				5B01E7B51CEE73D20097C973 /* BreathMeter.swift */,
 				5B7E972F1CE153C000C91CF9 /* New Group */,
 				5B7E97211CE14FB900C91CF9 /* Main.storyboard */,
 				5B7E97241CE14FB900C91CF9 /* Assets.xcassets */,
@@ -74,6 +81,8 @@
 		5B7E972F1CE153C000C91CF9 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				5B140C471CE191A6004E4B8F /* rimOne.wav */,
+				5B140C4A1CE191A6004E4B8F /* rimTwo.wav */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -81,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B7E97191CE14FB900C91CF9 /* GetUpNow */ = {
+		5B7E97191CE14FB900C91CF9 /* ControlledBreathingGuide */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B7E972C1CE14FB900C91CF9 /* Build configuration list for PBXNativeTarget "GetUpNow" */;
+			buildConfigurationList = 5B7E972C1CE14FB900C91CF9 /* Build configuration list for PBXNativeTarget "ControlledBreathingGuide" */;
 			buildPhases = (
 				5B7E97161CE14FB900C91CF9 /* Sources */,
 				5B7E97171CE14FB900C91CF9 /* Frameworks */,
@@ -93,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = GetUpNow;
+			name = ControlledBreathingGuide;
 			productName = GetUpNow;
-			productReference = 5B7E971A1CE14FB900C91CF9 /* GetUpNow.app */;
+			productReference = 5B7E971A1CE14FB900C91CF9 /* ControlledBreathingGuide.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5B7E97151CE14FB900C91CF9 /* Build configuration list for PBXProject "GetUpNow" */;
+			buildConfigurationList = 5B7E97151CE14FB900C91CF9 /* Build configuration list for PBXProject "ControlledBreathingGuide" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -126,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B7E97191CE14FB900C91CF9 /* GetUpNow */,
+				5B7E97191CE14FB900C91CF9 /* ControlledBreathingGuide */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +145,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B140C4B1CE191A6004E4B8F /* rimOne.wav in Resources */,
+				5B140C4E1CE191A6004E4B8F /* rimTwo.wav in Resources */,
 				5B7E97281CE14FB900C91CF9 /* LaunchScreen.storyboard in Resources */,
 				5B7E97251CE14FB900C91CF9 /* Assets.xcassets in Resources */,
 				5B7E97231CE14FB900C91CF9 /* Main.storyboard in Resources */,
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7E97311CE153CE00C91CF9 /* Timer.swift in Sources */,
+				5B01E7B61CEE73D20097C973 /* BreathMeter.swift in Sources */,
 				5B7E97201CE14FB900C91CF9 /* ViewController.swift in Sources */,
 				5B7E971E1CE14FB900C91CF9 /* AppDelegate.swift in Sources */,
 				5B140C441CE185E2004E4B8F /* Sound.swift in Sources */,
@@ -268,7 +280,7 @@
 				INFOPLIST_FILE = GetUpNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rpcarson.GetUpNow;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ControlledBreathingGuide;
 			};
 			name = Debug;
 		};
@@ -279,14 +291,14 @@
 				INFOPLIST_FILE = GetUpNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rpcarson.GetUpNow;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ControlledBreathingGuide;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B7E97151CE14FB900C91CF9 /* Build configuration list for PBXProject "GetUpNow" */ = {
+		5B7E97151CE14FB900C91CF9 /* Build configuration list for PBXProject "ControlledBreathingGuide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B7E972A1CE14FB900C91CF9 /* Debug */,
@@ -295,7 +307,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B7E972C1CE14FB900C91CF9 /* Build configuration list for PBXNativeTarget "GetUpNow" */ = {
+		5B7E972C1CE14FB900C91CF9 /* Build configuration list for PBXNativeTarget "ControlledBreathingGuide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B7E972D1CE14FB900C91CF9 /* Debug */,
